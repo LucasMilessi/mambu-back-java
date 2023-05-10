@@ -1,0 +1,20 @@
+package com.mambu.bancomambu.model.loan;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class LockAccountLoanDTO {
+
+    private List<String> lockedOperations;
+    private String notes;
+}
